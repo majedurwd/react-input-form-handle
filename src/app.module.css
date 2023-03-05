@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .container {
+    width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+} */
+.heading {
+    text-align: center;
+    font-size: 36px;
+    color: #1e1d1d;
+    margin-top: 30px;
+    font-weight: 500;
+    border-bottom: 1px solid #1e1d1d;
+    margin-bottom: 20px;
+}
