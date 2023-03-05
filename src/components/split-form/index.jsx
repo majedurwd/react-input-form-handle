@@ -37,7 +37,7 @@ class SplitForm extends React.Component {
         password: "",
     };
 
-    handleChangle = (event) => {
+    handleChanges = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         });
@@ -59,7 +59,7 @@ class SplitForm extends React.Component {
                         label="Enter Name"
                         placeholder="Majedur Rhaman"
                         value={name}
-                        onChange={this.handleChangle}
+                        onChange={this.handleChanges}
                     />
                     <TextInput
                         name="email"
@@ -67,7 +67,7 @@ class SplitForm extends React.Component {
                         label="Enter Email"
                         placeholder="majedur@demo.com"
                         value={email}
-                        onChange={this.handleChangle}
+                        onChange={this.handleChanges}
                     />
                     <TextInput
                         name="password"
@@ -75,7 +75,7 @@ class SplitForm extends React.Component {
                         label="Enter Password"
                         placeholder="******"
                         value={password}
-                        onChange={this.handleChangle}
+                        onChange={this.handleChanges}
                     />
                     <button type="submit" className="btn btn-primary">
                         Submit
