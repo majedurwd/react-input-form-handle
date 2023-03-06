@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./app.module.css";
 
-import Inputs from "./components/inputs"
-import UnControlledForm from "./components/forms/uncontrol-form"
-import ControlledForm from "./components/forms/control-form";
+// import Inputs from "./components/inputs"
+// import UnControlledForm from "./components/forms/uncontrol-form"
+// import ControlledForm from "./components/forms/control-form";
 import SplitForm from "./components/split-form";
 
 const App = () => {
