@@ -12,8 +12,11 @@ class SignupForm extends React.Component {
             password: "",
             gender: "",
             birthDate: ""
-        }
+        },
+        agreement: false
     }
+
+
 
     render() {
         return (
