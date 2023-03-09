@@ -1,13 +1,14 @@
 import React from "react";
-import Proptypes from "prop-types"
+
+import Form from "./form"
 
 
 let initValues = {
     name: "",
     email: "",
     password: "",
-    gender: "",
     birthDate: "",
+    gender: "",
 }
 
 class SignupForm extends React.Component {
@@ -46,7 +47,13 @@ class SignupForm extends React.Component {
         return (
             <div>
                 <h1>Sign-up Form</h1>
-
+                <Form
+                    values={this.state.values}
+                    agreement={this.state.agreement}
+                    handleChange={this.handleChange}
+                    handleAgreement={this.handleAgreement}
+                    handleSubmit={this.handleSubmit}
+                />
             </div>
         )
     }
