@@ -4,7 +4,8 @@ import classes from "./app.module.css";
 // import Inputs from "./components/inputs"
 // import UnControlledForm from "./components/forms/uncontrol-form"
 // import ControlledForm from "./components/forms/control-form";
-import SplitForm from "./components/split-form";
+// import SplitForm from "./components/split-form";
+import SignupForm from "./components/signup-form";
 
 const App = () => {
     return (
@@ -14,7 +15,9 @@ const App = () => {
                 {/* <Inputs /> */}
                 {/* <UnControlledForm /> */}
                 {/* <ControlledForm /> */}
-                <SplitForm />
+                {/* <SplitForm /> */}
+                <SignupForm />
+
             </div>
         </div>
     );
