@@ -36,10 +36,10 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                 value={values.birthDate}
                 onChange={handleChange}
             />
-            <div className="form-group">
-                <label>
+            <div className="form-group mb-3">
+                <label className="me-3">
                     <input
-                        className="form-control"
+                        className="form-group me-2"
                         type="radio"
                         name="gender"
                         value="Male"
@@ -47,9 +47,9 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                     />
                     Male
                 </label>
-                <label>
+                <label className="me-3">
                     <input
-                        className="form-control"
+                        className="form-group me-2"
                         type="radio"
                         name="gender"
                         value="Female"
@@ -57,9 +57,9 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                     />
                     Female
                 </label>
-                <label>
+                <label className="me-3">
                     <input
-                        className="form-control"
+                        className="form-group me-2"
                         type="radio"
                         name="gender"
                         value="Other"
@@ -71,15 +71,16 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
             <div className="form-group">
                 <label>
                     <input
-                        className="form-control"
+                        className="form-group me-2"
                         type="checkbox"
                         name="agreement"
                         checked={agreement}
                         onChange={handleAgreement}
                     />
+                    Agree for all terms ans condition
                 </label>
             </div>
-            <button className="btn primary-btn" type="submit">Create User</button>
+            <button className="btn btn-primary my-3" disabled={!agreement} type="submit">Create User</button>
         </form>
     )
 }
