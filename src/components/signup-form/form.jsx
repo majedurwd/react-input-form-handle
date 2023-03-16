@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import TextInput from "./text-input"
 
-const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }) => {
+const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit, errors }) => {
     return (  
         <form onSubmit={handleSubmit}>
             <TextInput
@@ -11,6 +11,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                 label="Name"
                 placeholder="Mr. Majed"
                 value={values.name}
+                error={errors.name}
                 onChange={handleChange}
             />
             <TextInput
@@ -19,6 +20,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                 label="Email"
                 placeholder="majed@example.com"
                 value={values.email}
+                error={errors.email}
                 onChange={handleChange}
             />
             <TextInput
@@ -27,6 +29,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                 label="Password"
                 placeholder="******"
                 value={values.password}
+                error={errors.password}
                 onChange={handleChange}
             />
             <TextInput
@@ -34,6 +37,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                 type="date"
                 label="BirthDate"
                 value={values.birthDate}
+                error={errors.birthDate}
                 onChange={handleChange}
             />
             <div className="form-group mb-3">
@@ -67,6 +71,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                     />
                     Other
                 </label>
+                {errors.gender && <div className="invalid-feedback">{ errors.gender }</div>}
             </div>
             <div className="form-group">
                 <label>
@@ -80,7 +85,9 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
                     Agree for all terms ans condition
                 </label>
             </div>
-            <button className="btn btn-primary my-3" disabled={!agreement} type="submit">Create User</button>
+            <button className="btn btn-primary my-3" disabled={!agreement} type="submit">
+                Create User
+            </button>
         </form>
     )
 }
@@ -88,6 +95,7 @@ const Form = ({ values, agreement, handleChange, handleAgreement, handleSubmit }
 Form.propTypes = {
     values: PropTypes.object.isRequired,
     agreement: PropTypes.bool.isRequired,
+    errors: PropTypes.object.isRequired,
     handleChange: PropTypes.func.isRequired,
     handleAgreement: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired
