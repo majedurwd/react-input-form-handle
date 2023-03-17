@@ -40,7 +40,7 @@ class SignupForm extends React.Component {
         if (isValid) {
             console.log(this.state.values);
             event.target.reset()
-            this.setState({ values: initValues, agreement: false })
+            this.setState({ values: initValues, agreement: false, errors: {} })
         } else {
             this.setState({errors})
         }
@@ -71,6 +71,7 @@ class SignupForm extends React.Component {
 
         return {
             errors,
+            agreement,
             isValid: Object.keys(errors).length === 0
         }
     }
